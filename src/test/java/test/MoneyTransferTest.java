@@ -74,8 +74,8 @@ public class MoneyTransferTest {
         int sum = 20000;
         moneyTransferPage.transferBetweenCards(Integer.parseInt(String.valueOf(sum)), cardToTransferFrom);
 
-        var expectedFirstCard = showFirstCardBalance - sum;
-        var expectedSecondCard = showSecondCardBalance + sum;
+        var expectedFirstCard = showFirstCardBalance;
+        var expectedSecondCard = showSecondCardBalance;
         var actualFirstCard = dashboardPage.getFirstCardBalance();
         var actualSecondCard = dashboardPage.getSecondCardBalance();
 
